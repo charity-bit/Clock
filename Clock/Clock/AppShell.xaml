@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Shell xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+          xmlns:icons="clr-namespace:Clock.Fonts"
+             NavigationPage.HasNavigationBar="False"
+             Shell.PresentationMode="NotAnimated"
+             xmlns:views="clr-namespace:Clock.views"
+             mc:Ignorable="d"
+             x:Class="Clock.AppShell">
+   
+
+    <TabBar Style="{DynamicResource BaseStyle}" >
+        <Tab Title="Alarm" >
+            <Tab.Icon>
+                <FontImageSource FontFamily="icomoon" Glyph="{x:Static icons:Icons.Alarm}"  />
+
+            </Tab.Icon>
+            <ShellContent>
+                              <views:AlarmPage />
+            </ShellContent>
+        </Tab>
+        <Tab  Title="WorldClock"  >
+            <Tab.Icon>
+                <FontImageSource FontFamily="icomoon" Glyph="{x:Static icons:Icons.WorldClock}" />
+            </Tab.Icon>
+            <ShellContent  >
+                <views:WorldClockPage />
+            </ShellContent>
+
+
+        </Tab>
+        <Tab Title="Stopwatch"  >
+            <Tab.Icon>
+                <FontImageSource FontFamily="icomoon" Glyph="{x:Static icons:Icons.StopWatch}" />
+            </Tab.Icon>
+
+            <ShellContent>
+                <views:StopWatchPage />
+            </ShellContent>
+
+        </Tab>
+        <Tab Title="Timer" >
+            <Tab.Icon>
+                <FontImageSource FontFamily="icomoon" Glyph="{x:Static icons:Icons.Timer}" />
+            </Tab.Icon>
+
+            <ShellContent>
+                <views:TimerPage />
+            </ShellContent>
+
+        </Tab>
+
+
+
+    </TabBar> 
+    
+</Shell>

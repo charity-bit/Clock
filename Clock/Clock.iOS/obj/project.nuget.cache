@@ -1,0 +1,28 @@
+{
+  "version": 2,
+  "dgSpecHash": "oLIpKIyx6SUeVaXQGQavEK6fndyI7hAo6tc494fnf0eMkIs1A9WnGFl4/Z5uzFoN3gN3zsPKSCuEgsMSyDKrXg==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\charitynyanchera\\Desktop\\Github\\Clock\\Clock\\Clock.iOS\\Clock.iOS.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\charitynyanchera\\.nuget\\packages\\carouselview.formsplugin\\5.2.0\\carouselview.formsplugin.5.2.0.nupkg.sha512",
+    "C:\\Users\\charitynyanchera\\.nuget\\packages\\commonservicelocator\\2.0.2\\commonservicelocator.2.0.2.nupkg.sha512",
+    "C:\\Users\\charitynyanchera\\.nuget\\packages\\mvvmlight\\5.4.1.1\\mvvmlight.5.4.1.1.nupkg.sha512",
+    "C:\\Users\\charitynyanchera\\.nuget\\packages\\mvvmlightlibs\\5.4.1.1\\mvvmlightlibs.5.4.1.1.nupkg.sha512",
+    "C:\\Users\\charitynyanchera\\.nuget\\packages\\sqlite-net-pcl\\1.7.335\\sqlite-net-pcl.1.7.335.nupkg.sha512",
+    "C:\\Users\\charitynyanchera\\.nuget\\packages\\sqlitepclraw.bundle_green\\2.0.3\\sqlitepclraw.bundle_green.2.0.3.nupkg.sha512",
+    "C:\\Users\\charitynyanchera\\.nuget\\packages\\sqlitepclraw.core\\2.0.3\\sqlitepclraw.core.2.0.3.nupkg.sha512",
+    "C:\\Users\\charitynyanchera\\.nuget\\packages\\sqlitepclraw.provider.dynamic_cdecl\\2.0.3\\sqlitepclraw.provider.dynamic_cdecl.2.0.3.nupkg.sha512",
+    "C:\\Users\\charitynyanchera\\.nuget\\packages\\syncfusion.licensing\\18.2.0.56\\syncfusion.licensing.18.2.0.56.nupkg.sha512",
+    "C:\\Users\\charitynyanchera\\.nuget\\packages\\syncfusion.xamarin.core\\18.2.0.56\\syncfusion.xamarin.core.18.2.0.56.nupkg.sha512",
+    "C:\\Users\\charitynyanchera\\.nuget\\packages\\syncfusion.xamarin.sfpicker\\18.2.0.56\\syncfusion.xamarin.sfpicker.18.2.0.56.nupkg.sha512",
+    "C:\\Users\\charitynyanchera\\.nuget\\packages\\system.buffers\\4.4.0\\system.buffers.4.4.0.nupkg.sha512",
+    "C:\\Users\\charitynyanchera\\.nuget\\packages\\system.componentmodel\\4.3.0\\system.componentmodel.4.3.0.nupkg.sha512",
+    "C:\\Users\\charitynyanchera\\.nuget\\packages\\system.memory\\4.5.3\\system.memory.4.5.3.nupkg.sha512",
+    "C:\\Users\\charitynyanchera\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\4.5.2\\system.runtime.compilerservices.unsafe.4.5.2.nupkg.sha512",
+    "C:\\Users\\charitynyanchera\\.nuget\\packages\\system.threading.timer\\4.3.0\\system.threading.timer.4.3.0.nupkg.sha512",
+    "C:\\Users\\charitynyanchera\\.nuget\\packages\\xamarin.essentials\\1.5.3.2\\xamarin.essentials.1.5.3.2.nupkg.sha512",
+    "C:\\Users\\charitynyanchera\\.nuget\\packages\\xamarin.forms\\4.8.0.1364\\xamarin.forms.4.8.0.1364.nupkg.sha512",
+    "C:\\Users\\charitynyanchera\\.nuget\\packages\\xamarin.forms.pancakeview\\2.2.0.740\\xamarin.forms.pancakeview.2.2.0.740.nupkg.sha512"
+  ],
+  "logs": []
+}

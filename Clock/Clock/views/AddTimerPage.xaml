@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             NavigationPage.HasNavigationBar="False"
+             Shell.NavBarIsVisible="False"
+             x:Class="Clock.views.AddTimerPage">
+    <ContentPage.Content>
+        <StackLayout Spacing="20">
+            <!--title view-->
+            <StackLayout Spacing="0">       
+                <StackLayout Orientation="Horizontal"   
+                          HeightRequest="50" Margin="20,0"
+                          VerticalOptions="Start">
+
+                <Label Text="Cancel" TextColor="{StaticResource AccentColor}" HorizontalOptions="Start" 
+                   VerticalOptions="Center"  FontSize="15">
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnCancelClicked" />
+                    </Label.GestureRecognizers>
+                </Label>
+                <Label Text="Add Timer" TextColor="Black" HorizontalOptions="CenterAndExpand" 
+                   VerticalOptions="Center"  FontSize="15"/>
+                <Label Text="Save" TextColor="{StaticResource AccentColor}" HorizontalOptions="EndAndExpand"  
+                   VerticalOptions="Center"  FontSize="15">
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnSaveClicked" />
+                    </Label.GestureRecognizers>
+                </Label>
+                
+
+
+            </StackLayout>
+                <BoxView HeightRequest="1" VerticalOptions="Start"
+                     HorizontalOptions="FillAndExpand" BackgroundColor="{StaticResource Gray}" />
+
+            </StackLayout>
+
+           
+            <Entry Text="{Binding Title}" HorizontalOptions="Center" WidthRequest="140" HorizontalTextAlignment="Center" />
+
+            <TimePicker Time="{Binding TimeSpan}" VerticalOptions="Center" />
+
+
+        </StackLayout>
+
+    </ContentPage.Content>
+</ContentPage>

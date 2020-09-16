@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Application xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             
+             mc:Ignorable="d"
+             x:Class="Clock.App">
+    <Application.Resources>
+        <Color  x:Key="AccentColor">#F47048</Color>
+        <Color x:Key="White">#FFFFFF</Color>
+        <Color x:Key="Gray">#AAAAAA</Color>
+        <Color x:Key="btnColor1">#FF8961</Color>
+
+        <Color x:Key="btnColor2">#A8C2F7</Color>
+        
+
+
+
+        <Style x:Key="BaseStyle" TargetType="Element">
+            <Setter Property="Shell.TabBarBackgroundColor" Value="{StaticResource White}" />
+            <Setter Property="Shell.TabBarTitleColor" Value="{StaticResource AccentColor}" />
+            <Setter Property="Shell.TabBarForegroundColor" Value="{StaticResource AccentColor}" />
+            <Setter Property="Shell.TabBarUnselectedColor" Value="{StaticResource Gray}" />
+        </Style>
+        
+    </Application.Resources>
+</Application>
