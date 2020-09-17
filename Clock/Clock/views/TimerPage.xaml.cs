@@ -19,12 +19,13 @@ namespace Clock.views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class TimerPage : ContentPage
     {
+        public TimerViewModel vm = new TimerViewModel();
        
-
+ 
         public TimerPage()
         {
             InitializeComponent();
-            
+            BindingContext = vm;
             
 
             ButtonPause_Resume.IsEnabled = false;
@@ -48,8 +49,12 @@ namespace Clock.views
                 AddButton.IsVisible = false;
                 TimerLabel.IsVisible = true;
                 SeparatorLine.IsVisible = false;
-                    ButtonStart_Cancel.Text = "cancel";
+                ButtonStart_Cancel.Text = "Cancel";
+                   
                 
+                
+
+
 
 
             }
@@ -61,12 +66,31 @@ namespace Clock.views
                 MyTimers.IsVisible = true;
                 TimerLabel.IsVisible = false;
                 AddButton.IsVisible = true;
+               
                 ButtonStart_Cancel.Text = "Start";
-                
+                ButtonPause_Resume.Text = "Pause";
+              
+
 
 
                 count = 0;
             }
+
+            if(ButtonStart_Cancel.Text == "Start")
+            {
+                ButtonStart_Cancel.SetBinding(Button.CommandParameterProperty, new Binding("."));
+                ButtonStart_Cancel.SetBinding(Button.CommandProperty, new Binding("StartCommand"));
+
+            }
+
+            else if(ButtonStart_Cancel.Text == "Cancel")
+            {
+                ButtonStart_Cancel.SetBinding(Button.CommandParameterProperty, new Binding("."));
+                ButtonStart_Cancel.SetBinding(Button.CommandProperty, new Binding("StopCommand"));
+
+            }
+
+
 
 
 
@@ -88,15 +112,33 @@ namespace Clock.views
         {
             Count++;
             if(Count == 1)
-            {
+            {   
                 ButtonPause_Resume.Text = "Resume";
+               
             }
             else if(Count == 2)
             {
+                
                 ButtonPause_Resume.Text = "Pause";
                 Count = 0;
             }
-             
+
+
+            if(ButtonPause_Resume.Text== "Resume")
+            {
+                ButtonPause_Resume.SetBinding(Button.CommandParameterProperty, new Binding("."));
+
+                ButtonPause_Resume.SetBinding(Button.CommandProperty, new Binding("StartCommand"));
+
+            }
+
+            else if(ButtonPause_Resume.Text == "Pause")
+            {
+                ButtonPause_Resume.SetBinding(Button.CommandParameterProperty, new Binding("."));
+
+                ButtonPause_Resume.SetBinding(Button.CommandProperty, new Binding("StopCommand"));
+
+            }
         }
 
         private async void AddTime_Clicked(object sender, EventArgs e)
@@ -111,14 +153,8 @@ namespace Clock.views
         private async void MyTimers_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
              var timer = e.CurrentSelection[0] as TimerItem;
-             if(timer != null)
-              {
-                  await Navigation.PushAsync(new AddTimerPage
-                  {
-                      BindingContext = timer
-                  }); 
-              }
-             
+           
+            TimePicker.Time = timer.TimeSpan;
 
                 
 

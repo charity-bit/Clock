@@ -17,3 +17,4 @@ C:\Users\charitynyanchera\Desktop\Github\Clock\Clock\Clock\obj\Debug\netstandard
 C:\Users\charitynyanchera\Desktop\Github\Clock\Clock\Clock\obj\Debug\netstandard2.0\Clock.csproj.CoreCompileInputs.cache
 C:\Users\charitynyanchera\Desktop\Github\Clock\Clock\Clock\obj\Debug\netstandard2.0\XamlC.stamp
 C:\Users\charitynyanchera\Desktop\Github\Clock\Clock\Clock\obj\Debug\netstandard2.0\Clock.csprojAssemblyReference.cache
+C:\Users\charitynyanchera\Desktop\Github\Clock\Clock\Clock\obj\Debug\netstandard2.0\views\WorldClockListPage.xaml.g.cs

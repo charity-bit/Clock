@@ -13,4 +13,5 @@ namespace Clock.models
         public TimeSpan TimeSpan { get; set; }
 
     }
+
 }

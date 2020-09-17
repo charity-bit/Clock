@@ -30,8 +30,13 @@ namespace Clock.viewmodel
         }
 
         private void Start()
-        {
+        {   if (_totalSeconds.TotalSeconds == 0) {
+                TotalSeconds = new TimeSpan(0, 0, 1);
+
+            }
+
             _timer.Start();
+            
         }
 
         private void CountDown()
@@ -51,6 +56,7 @@ namespace Clock.viewmodel
         {
             
             _timer.Stop();
+            
         }
 
         private void Reset()

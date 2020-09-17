@@ -7,13 +7,13 @@
              xmlns:vm="clr-namespace:Clock.viewmodel"
              Shell.PresentationMode="NotAnimated"
              Shell.NavBarIsVisible="False"
+             
              mc:Ignorable="d"
              x:Class="Clock.views.TimerPage">
 
     <ContentPage.BindingContext>
         <vm:TimerViewModel />
     </ContentPage.BindingContext>
-
     <ContentPage.Content>
         <StackLayout Spacing="20">
             <!--title view-->
@@ -49,13 +49,29 @@
                                 SelectionChanged="MyTimers_SelectionChanged" 
                                 SelectionMode="Single">
                     <CollectionView.ItemsLayout>
-                        <GridItemsLayout Orientation="Vertical" Span="3" VerticalItemSpacing="10"
-                                     HorizontalItemSpacing="10" />
+                        <GridItemsLayout Orientation="Vertical" Span="3"  
+                                         VerticalItemSpacing="5"
+                                     HorizontalItemSpacing="5" />
                     </CollectionView.ItemsLayout>
                     <CollectionView.ItemTemplate>
                         <DataTemplate>
                             <Frame CornerRadius="10" WidthRequest="100" HeightRequest="100"  
-                               BorderColor="{StaticResource AccentColor}" Padding="0" HasShadow="False">
+                               BorderColor="{StaticResource Gray}" Padding="0" HasShadow="False">
+                            <VisualStateManager.VisualStateGroups>
+                                <VisualStateGroup x:Name="CommonStates">
+                                    <VisualState x:Name="Selected" >
+                                        <VisualState.Setters >
+                                            <Setter Property="BorderColor" Value="{StaticResource AccentColor}" />
+                                        </VisualState.Setters>
+                                    </VisualState>
+                                    <VisualState x:Name="Normal">
+                                        <VisualState.Setters>
+                                            <Setter Property="BorderColor" Value="{StaticResource Gray}" />
+                                        </VisualState.Setters>
+                                    </VisualState>
+                                </VisualStateGroup>
+                            </VisualStateManager.VisualStateGroups>
+
                             <Grid RowDefinitions="1*,1*" Margin="5,5">
                                     <Label Text="{Binding Title}" FontSize="15" TextColor="Black" />
                                     <StackLayout Orientation="Horizontal" VerticalOptions="End"  Spacing="10"
@@ -101,7 +117,7 @@
                          >
                 <Button CornerRadius="30" HeightRequest="40" WidthRequest="130"  
                         x:Name="ButtonStart_Cancel"     Clicked="ButtonStart_Cancel_Clicked"          
-                        Text="Start" TextColor="{StaticResource White}"  Command="{Binding StartCommand}" 
+                        Text="Start" TextColor="{StaticResource White}"   Command="{Binding StartCommand}"
                         BackgroundColor="{StaticResource btnColor1}" />
 
                 <Button CornerRadius="30" Text="Pause" HeightRequest="40" 

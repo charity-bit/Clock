@@ -9,25 +9,33 @@ using System.Diagnostics;
 
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using System.Collections.Generic;
 
 namespace Clock.views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class StopWatchPage : ContentPage
     {
-        private readonly Stopwatch stopWatch;
+              private readonly Stopwatch stopWatch;
         
+
+
+
+
         public StopWatchPage()
         {
             InitializeComponent();
             stopWatch = new Stopwatch();
             LblStopWatch.Text = "00:00.00";
-             
+            
+
         }
+
+
         int count = 0;
         private void Button_Start(object sender, EventArgs e)
         {
-              count++;
+            count++;
 
 
             if (count == 1)
@@ -35,7 +43,7 @@ namespace Clock.views
                 if (!stopWatch.IsRunning)
                 {
                     stopWatch.Start();
-                    
+
                     Device.StartTimer(TimeSpan.FromMilliseconds(100), () =>
                     {
                         Device.BeginInvokeOnMainThread(() =>
@@ -65,22 +73,27 @@ namespace Clock.views
 
             }
 
-            else if(count == 2)
-                    
+            else if (count == 2)
+
             {
                 stopWatch.Stop();
                 BtnStop_Start.Text = "Start";
                 BtnLap_Reset.Text = "Reset";
-                
-            
-            count = 0;
+
+
+                count = 0;
 
             }
 
 
         }
 
+          
+        
+
        
+        
+
 
 
 
@@ -92,13 +105,15 @@ namespace Clock.views
                 LblStopWatch.Text = "00:00.00";
                 BtnLap_Reset.Text = "Lap";
                 BtnLap_Reset.IsEnabled = false;
-
+                
 
             }
              if(BtnLap_Reset.Text == "Lap")
             {
+                
+              
 
-            
+
             }
         }
     }
